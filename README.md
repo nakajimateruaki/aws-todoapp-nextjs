@@ -40,25 +40,25 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Deploy on AWS
 
 ```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
-source ~/.bashrc
+$ source ~/.bashrc
 
-nvm install --lts
+$ nvm install --lts
 
-nvm install 14.18.0
+$ nvm install 14.18.0
 
-nvm alias default 14.18.0
+$ nvm alias default 14.18.0
 
-source ~/.bashrc
+$ source ~/.bashrc
 ```
 
 必要に応じて、プロジェクトの依存関係を再インストールします。
 
 ```bash
-cd /path/to/your/project
-rm -rf node_modules
-npm install
+$ cd /path/to/your/project
+$ rm -rf node_modules
+$ npm install
 ```
 
 - @/components/AddTodo というパスがエラーの場合には相対パスで記述する
@@ -68,6 +68,8 @@ npm install
 本番サーバーで npm start を実行する場合は以下のコードで実行をする
 
 ```bash
+$ npm run build
+
 $ npm install -g pm2
 
 $ pm2 start npm --name "your-app-name" -- run start
